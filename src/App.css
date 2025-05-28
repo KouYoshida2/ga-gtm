@@ -1,0 +1,386 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* App Layout */
+.app {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  width: 100%;
+  color: inherit; /* 親要素から継承 */
+}
+
+.app-main {
+  flex: 1;
+  padding: 2rem;
+  max-width: 1280px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: transparent;
+}
+
+/* Header Styles */
+.app-header {
+  background-color: #1a1a1a;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  color: #ffffff;
+}
+
+.logo a {
+  color: #ffffff;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-decoration: none;
+}
+
+.navigation ul {
+  display: flex;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.navigation li {
+  margin-left: 1.5rem;
+}
+
+.navigation li a {
+  color: #ffffff;
+  text-decoration: none;
+  padding: 0.5rem;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.navigation li a:hover {
+  background-color: #646cff;
+  color: #ffffff;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.navigation li.active a {
+  background-color: #535bf2;
+}
+
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+
+/* Footer Styles */
+.app-footer {
+  background-color: #1a1a1a;
+  color: #ffffff;
+  text-align: center;
+  padding: 1rem;
+  margin-top: auto;
+}
+
+/* Home Page Styles */
+.home-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  color: #333;
+}
+
+.navigation-links {
+  display: flex;
+  justify-content: center;
+  margin: 2rem 0;
+}
+
+.nav-link {
+  display: inline-block;
+  background-color: #646cff;
+  color: #ffffff;
+  padding: 0.8rem 1.6rem;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.nav-link:hover {
+  background-color: #4a51db;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+  margin-top: 2rem;
+  background-color: #ffffff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  width: 100%;
+  color: #222222;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+/* User List Styles */
+.user-list-container {
+  padding: 1rem 0;
+  color: #333;
+}
+
+.user-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.user-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 1.5rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  color: #222222;
+}
+
+.user-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.user-card h2 {
+  margin-top: 0;
+  color: #222222;
+  font-size: 1.5rem;
+}
+
+.user-link {
+  display: inline-block;
+  margin-top: 1rem;
+  background-color: #646cff;
+  color: #ffffff;
+  padding: 0.5rem 1rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.user-link:hover {
+  background-color: #4a51db;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* User Detail Styles */
+.user-detail-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.user-detail {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 2rem;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  color: #222222;
+}
+
+.detail-section {
+  margin: 1.5rem 0;
+  padding: 1rem;
+  background-color: #f9f9f9;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  color: #222222;
+}
+
+.back-button {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #333;
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: #444;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+/* Not Found Page */
+.not-found-container {
+  text-align: center;
+  padding: 3rem 1rem;
+  color: #333;
+}
+
+.home-link {
+  display: inline-block;
+  margin-top: 1.5rem;
+  background-color: #646cff;
+  color: #ffffff;
+  padding: 0.7rem 1.2rem;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.home-link:hover {
+  background-color: #4a51db;
+  color: #ffffff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Common */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  min-height: 200px;
+  color: #ffffff; /* ダークモード用に明るいテキスト */
+  background-color: rgba(255, 255, 255, 0.05);
+  border-radius: 8px;
+  padding: 2rem;
+}
+
+.error {
+  color: #f44336;
+  text-align: center;
+  padding: 2rem;
+  font-size: 1.2rem;
+  background-color: rgba(244, 67, 54, 0.1);
+  border-radius: 8px;
+  border: 1px solid rgba(244, 67, 54, 0.3);
+}
+
+/* テキスト表示の基本スタイル */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+span,
+div {
+  color: inherit; /* 親要素から色を継承 */
+}
+
+/* 明示的に暗い背景にはフォント色を明るく */
+.app-header,
+.app-footer {
+  color: #ffffff;
+}
+
+/* 明示的に明るい背景にはフォント色を暗く、ダークモードでは明るく */
+.user-list-container,
+.home-container,
+.not-found-container {
+  color: #ffffff; /* ダークモード対応 */
+  background-color: rgba(255, 255, 255, 0.05);
+  padding: 1.5rem;
+  border-radius: 8px;
+}
+
+/* ダークモード対応のスタイル */
+@media (prefers-color-scheme: dark) {
+  body {
+    background-color: #121212;
+  }
+
+  .user-card,
+  .user-detail,
+  .detail-section,
+  .about-section {
+    background-color: #2d2d2d;
+    color: #ffffff;
+  }
+
+  .user-card h2,
+  .detail-section h3 {
+    color: #ffffff;
+  }
+
+  .home-container,
+  .user-list-container,
+  .user-detail-container,
+  .not-found-container {
+    color: #ffffff;
+  }
+
+  .loading {
+    color: #e0e0e0;
+  }
+
+  p,
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6,
+  span {
+    color: #ffffff;
+  }
+}
+
+/* ライトモード用のスタイル - 既存のものを補完 */
+@media (prefers-color-scheme: light) {
+  body {
+    background-color: #f7f7f7;
+  }
+
+  .user-card,
+  .user-detail,
+  .about-section {
+    background-color: #ffffff;
+    color: #222222;
+  }
+
+  .detail-section {
+    background-color: #f9f9f9;
+    color: #222222;
+  }
+
+  .home-container,
+  .user-list-container,
+  .user-detail-container,
+  .not-found-container {
+    color: #222222;
+    background-color: transparent;
+  }
+}

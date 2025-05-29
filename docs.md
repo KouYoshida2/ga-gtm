@@ -33,7 +33,7 @@
 
 1. GTM アカウントとコンテナを作成する
 
-   - GTM 公式サイト（https://tagmanager.google.com/）にアクセス
+   - [GTM公式サイト](https://tagmanager.google.com/)にアクセス
    - 「アカウントを作成」をクリック
    - アカウント名、コンテナ名を入力
    - ターゲットプラットフォームとして「Web」を選択
